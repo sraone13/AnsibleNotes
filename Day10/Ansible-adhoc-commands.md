@@ -8,10 +8,11 @@ ansible <hosts> [-m <module_name>] -a <"arguments"> -u <username> [--become]
 
 2. To run reboot for all your company servers in the group, 'abc', in 12 parallel forks:
 
+```
 $ ansible abc -a "/sbin/reboot" -f 12  
 
 $ ansible abc -a "/sbin/reboot" -f 12 -u username  
-
+```
 
 3. File Transfer:
 You can use ad-hoc commands for doing SCP (secure copy protocol) which means lots of files in parallel on multiple machines or servers.
@@ -32,7 +33,7 @@ $ ansible abc -m file -a "dest = /path/user1/new state = absent"
 
 ```
 
-4. Managing Packages
+4. Managing Packages:
 Ad-hoc commands are available for apt and yum module. Here are the following ad-hoc commands using yum.
 
 Below command checks, if the yum package is installed or not, but not update it.
@@ -49,7 +50,7 @@ And below command checks the latest version of package is installed.
 $ ansible abc -m yum -a "name = demo-tomcat-1 state = latest"   
 ```
 
-5. anaging Users and Groups
+5. anaging Users and Groups:
 You can manage, create, and remove a user account on your managed nodes with ad-hoc commands.
 
 ```
@@ -57,6 +58,8 @@ $ ansible all -m user -a "name=foo password=<crypted password here>"
   
 $ ansible all -m user -a "name=foo state=absent"
 ```  
+
+
 6. Managing Services:
 
 Ensure a service is started on all the webservers.
@@ -71,6 +74,7 @@ Ensure a service is stopped:
 ```
 $ ansible webservers -m service -a "name=httpd state=stopped"
 ```
+
 
 7. Gathering Facts:
 

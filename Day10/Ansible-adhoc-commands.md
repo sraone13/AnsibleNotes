@@ -84,6 +84,7 @@ $ ansible all -m setup
 
 
 8. Verbocity in vvv it will will print the execution of evert tasks. 
+
 ```
 ansible-playbook -vvv last-playbook.yml
 ```

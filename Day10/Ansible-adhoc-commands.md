@@ -81,7 +81,10 @@ $ ansible webservers -m service -a "name=httpd state=stopped"
 Fact represents the discovered variables about a system. You can use the facts to implement conditional execution of tasks, and also used to get ad-hoc information about your systems. To see all the facts:
 ```
 $ ansible all -m setup  
-```
 
-8. 
+
+8. Verbocity in vvv it will will print the execution of evert tasks. 
+```
+ansible-playbook -vvv last-playbook.yml
+```
 

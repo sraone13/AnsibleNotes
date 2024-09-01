@@ -82,3 +82,6 @@ Fact represents the discovered variables about a system. You can use the facts t
 ```
 $ ansible all -m setup  
 ```
+
+8. 
+
